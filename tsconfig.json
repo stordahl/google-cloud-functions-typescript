@@ -1,0 +1,24 @@
+{
+  "resolveJsonModule": true,
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "preserveConstEnums": true,
+    "lib": ["ES2021", "dom"],
+    "types": ["vitest/globals"],
+    "skipLibCheck": true,
+
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "declarationDir": "./build/types",
+    "outDir": "./build",
+    /* Linting */
+    "strict": true,
+    "rootDir": "./src",
+  },
+  "include": ["src"]
+}

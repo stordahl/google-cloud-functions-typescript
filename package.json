@@ -1,0 +1,29 @@
+{
+  "name": "google-cloud-functions-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "NODE_ENV=production vite build",
+    "check": "tsc --noEmit",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"pnpm run dev:compile\" \"pnpm run dev:serve\"",
+    "dev:compile": "NODE_ENV=development tsc --watch --resolveJsonModule",
+    "dev:serve": "NODE_ENV=development nodemon --watch ./build/ --exec pnpm run preview",
+    "preview": "functions-framework --target helloWorld --port 3000",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [],
+  "author": "stordahl",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
+  }
+}
