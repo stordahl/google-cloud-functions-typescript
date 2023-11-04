@@ -1,2 +1,2 @@
 # google-cloud-functions-typescript
-A Template repo for building Google Cloud Functions with TypeScript
+A Template repo for building Google Cloud Functions with TypeScript, Vite, and Vitest.
